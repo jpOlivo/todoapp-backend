@@ -4,23 +4,32 @@ import java.util.Date;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document(collection = "todos")
 @JsonIgnoreProperties(value = { "createdAt" }, allowGetters = true)
+@ApiModel(value = "Task", description = "It represent a task to do")
 public class Todo {
 	@Id
+	@ApiModelProperty(position = 1, value = "The id of task.")
 	private String id;
 
 	@NotBlank
 	@Size(max = 100)
 	@Indexed(unique = true)
+	@ApiModelProperty(position = 2, value = "The title of task.")
 	private String title;
 
+	@ApiModelProperty(position = 3, value = "Indicates if the task is completed.")
 	private Boolean completed = false;
 
+	@ApiModelProperty(position = 4, value = "The date of creation of task.")
 	private Date createdAt = new Date();
 
 	public Todo() {
