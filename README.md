@@ -11,4 +11,9 @@ The documentation of API Rest is available in [http://localhost:8080/swagger-ui.
 
 ![img](https://i.imgur.com/3k91pkd.png)
 
-# mongoDB
+# Database
+There is a database created on mLab that can be access through MongoDB URI:
+
+`mongodb://<dbuser>:<dbpassword>@ds125031.mlab.com:25031/todoapp`
+
+or you can use your own database, review the [application.properties](https://github.com/jpOlivo/todoapp-backend/blob/master/src/main/resources/application.properties) file in order to configure it at your convenience.
