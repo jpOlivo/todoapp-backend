@@ -1,10 +1,10 @@
-# TODO app - backend
+# TODO app - Backend
 This app is implemented on Spring Boot and exposes REST services in order to consumed by an Angular app ([TODO app](https://github.com/jpOlivo/todoapp-frontend)).
 
 This implementation was developed following a [tutorial](https://www.callicoder.com/spring-boot-mongodb-angular-js-rest-api-tutorial/) from [@callicoder](https://twitter.com/callicoder)
 
 
-# API REST
+## API Rest
 The services offered enable to perform CRUD operations on a MongoDB instance created on [mLab](https://mlab.com/databases/todoapp).
 
 ![img](https://i.imgur.com/3k91pkd.png)
@@ -12,16 +12,16 @@ The services offered enable to perform CRUD operations on a MongoDB instance cre
 There is a docs of this API available in [http://localhost:8080/swagger-ui.html#/](http://localhost:8080/swagger-ui.html#/)
 
 
-# Database
+## Database
 An MongoDB instance was created in the cloud and it can be access through URI: `mongodb://<dbuser>:<dbpassword>@ds125031.mlab.com:25031/todoapp`
 
 Also, you can use your own database. Please, review the [application.properties](https://github.com/jpOlivo/todoapp-backend/blob/master/src/main/resources/application.properties) file in order to change it.
 
 
-# Running the app
+## Running the app
 From Eclipse IDE `com.example.todoapp.TodoappApplication -> Run As -> Java Application`
 
-# Invoking services
+## Invoking services
 
 1- Get __/api/todos__
 
